@@ -1,0 +1,15 @@
+{
+  "name": "wheater",
+  "version": "1.0.0",
+  "description": "simple webapp that forecast the temperature from a given city",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "4.16.4"
+  }
+}
