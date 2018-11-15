@@ -5,7 +5,7 @@ const routes = require('./routes/routes');
 
 
 app.use(bodyParser.json());
-
+app.use(express.static('public'))
 routes(app);
 
 

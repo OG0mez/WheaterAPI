@@ -1,6 +1,8 @@
+const path = require('path')
+
 module.exports = (app) =>{
 
     app.get('/',(req,res)=>{
-        res.send('hello express');
+        res.sendFile(__dirname + 'index.html')
     })
 }
