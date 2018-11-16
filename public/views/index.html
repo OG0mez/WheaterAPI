@@ -21,8 +21,10 @@
     </form>
     <script>
         $('#formId').submit(function (event) {
-            $.post('/', $('#formId').serialize())
-            console.log('done')
+            $.post('/', $('#formId').serialize(),(data) =>{
+                console.log(data)
+            })
+            
             event.preventDefault();
         });
     </script>
