@@ -17,8 +17,9 @@ module.exports = (app) => {
     app.post('/', async (req, res) => {
         const data = req.body.textField;
         try {
-            result = await axios.get(`${URL}${data}&APPID=${APIKEY}`);
-            res.status(200).send(JSON.stringify(result.data))
+            const result = await axios.get(`${URL}${data}&units=metric&APPID=${APIKEY}`);
+            const weather = result.data.main
+            res.status(200).send(JSON.stringify(weather));
         } catch (error) {
             res.status(500).send(error.message)
         }
